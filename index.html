@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fares' website</title>
+    <title>My Pictures</title>
     <style>
         body {
             display: flex;
+            flex-wrap: wrap; /* allows stacking on small screens */
             justify-content: center;
             align-items: center;
             gap: 20px; /* space between images */
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
         }
         img {
-            max-width: 45%;
-            max-height: 90%;
+            max-width: 90%;
+            max-height: 45vh; /* adjusts height for vertical stacking */
             border-radius: 10px;
+        }
+
+        @media(min-width: 600px) {
+            img {
+                max-width: 45%; /* side by side on larger screens */
+                max-height: 90%;
+            }
         }
     </style>
 </head>
@@ -28,9 +36,9 @@
     <img src="usman1.jpeg" alt="Usman1">
     <img src="fares3.jpeg" alt="Fares3">
     <img src="hakan1.jpeg" alt="Hakan1">
-
 </body>
 </html>
+
 
 
 
