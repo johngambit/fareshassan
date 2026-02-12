@@ -49,23 +49,21 @@ body {
 }
 
 .floating-gif {
-    position: fixed;  /* stays in place when scrolling */
-    width: 200px;     /* adjust size */
+    position: fixed;   /* stays in place as you scroll */
+    width: 200px;      /* adjust GIF size */
     height: auto;
-    z-index: 1000;
+    z-index: 1000;     /* make sure it’s on top */
 }
 
-/* move this GIF closer to center from top-left */
-.top-left {
-    top: 150px;       /* distance from top of screen */
-    left: 200px;      /* distance from left of screen */
-}
+/* Left side GIFs */
+.left-1 { top: 100px; left: 20px; }
+.left-2 { top: 250px; left: 20px; }
+.left-3 { top: 400px; left: 20px; }
 
-/* move this GIF closer to center from bottom-right */
-.bottom-right {
-    bottom: 150px;    /* distance from bottom of screen */
-    right: 200px;     /* distance from right of screen */
-}
+/* Right side GIFs */
+.right-1 { top: 100px; right: 20px; }
+.right-2 { top: 250px; right: 20px; }
+.right-3 { top: 400px; right: 20px; }
 
 
 /* mobile tweaks */
@@ -80,8 +78,16 @@ body {
 
 <body>
 
-    <!-- Floating GIFs -->
-    <img src="banana.gif" class="floating-gif top-left" alt="Top left GIF">
+    <!-- Left side GIFs -->
+    <img src="banana.gif" class="floating-gif left-1" alt="Left GIF 1">
+    <img src="orange.gif" class="floating-gif left-2" alt="Left GIF 2">
+    <img src="gif3.gif" class="floating-gif left-3" alt="Left GIF 3">
+
+    <!-- Right side GIFs -->
+    <img src="gif4.gif" class="floating-gif right-1" alt="Right GIF 1">
+    <img src="gif5.gif" class="floating-gif right-2" alt="Right GIF 2">
+    <img src="gif6.gif" class="floating-gif right-3" alt="Right GIF 3">
+
     
 <div class="container">
     <div class="box">
@@ -114,6 +120,7 @@ body {
 
 </body>
 </html>
+
 
 
 
