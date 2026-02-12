@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Fares</title>
-    <style>
-        body {
-            display: flex;
-            flex-wrap: wrap; /* allows stacking on small screens */
-            justify-content: center;
-            align-items: center;
-            gap: 20px; /* space between images */
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        img {
-            max-width: 90%;
-            max-height: 45vh; /* adjusts height for vertical stacking */
-            border-radius: 10px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Friendly Site</title>
 
-        @media(min-width: 600px) {
-            img {
-                max-width: 45%; /* side by side on larger screens */
-                max-height: 90%;
-            }
-        }
-    </style>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* flex container */
+.container {
+    display: flex;
+    flex-wrap: wrap;          /* allows wrapping on small screens */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* content boxes */
+.box {
+    flex: 1 1 300px;          /* grows, shrinks, min width 300px */
+    max-width: 600px;
+    background: rgba(0,0,0,0.5); /* semi-transparent for readability */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* mobile tweaks */
+@media (max-width: 600px) {
+    .box {
+        flex: 1 1 100%;
+    }
+}
+</style>
 </head>
+
 <body>
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
-    <img src="fares4.png" alt="Fares1">
+
+<div class="container">
+    <div class="box">
+        <h1>Welcome</h1>
+        <p>This is normal text on top of a PNG background.</p>
+    </div>
+
+    <div class="box">
+        <h2>More Content</h2>
+        <p>This layout uses flex-wrap so it stacks nicely on mobile.</p>
+    </div>
+</div>
+
 </body>
 </html>
-
-
 
 
 
