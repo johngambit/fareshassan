@@ -10,16 +10,19 @@ body {
     margin: 0;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     min-height: 100vh;
+
+    /* background image with semi-transparent overlay */
     background-image:
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url("background.png");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+
+    background-size: auto;           /* keep original image size so it can repeat */
+    background-attachment: scroll;   /* scrolls with the page */
+    background-position: top center; /* starting position */
+    background-repeat: repeat-y;     /* repeat vertically */
+    
     color: red;
 }
-
 
 /* flex container */
 .container {
@@ -44,13 +47,14 @@ body {
     height: auto;     /* keeps proportions */
     border-radius: 0px; /* optional rounded corners */
 }
-    
+
 /* mobile tweaks */
 @media (max-width: 600px) {
     .box {
         flex: 1 1 100%;
     }
 }
+
 </style>
 </head>
 
@@ -74,6 +78,7 @@ body {
 
 </body>
 </html>
+
 
 
 
